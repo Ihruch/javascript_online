@@ -1,0 +1,218 @@
+.gunman.gunman_type_3 {
+  width: 26px;
+  height: 80px;
+  background-position: 0 -144px;
+}
+.gunman_type_3.gunman_state_ready {
+  background-position: 0 -144px;
+}
+.gunman_type_3.gunman_state_fire {
+  width: 28px;
+  background-position: -84px -144px;
+}
+.gunman_type_3.gunman_state_walk {
+  width: 28px;
+  animation: gunman-3-walk 0.3s steps(2) infinite;
+}
+.gunman_type_3.gunman_state_die {
+  margin-left: -3px;
+  width: 32px;
+  background-position: -205px -144px;
+}
+.gunman_type_3.gunman_state_die:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  background: url("../gunman.png") -239px -216px;
+  animation: gunman-3-hat-fly 1s linear;
+  width: 16px;
+  height: 8px;
+  top: 20px;
+  left: 105px;
+}
+.gunman_type_3.gunman_state_win,
+.gunman_type_3.gunman_state_foul {
+  width: 30px;
+  margin-left: -2px;
+  animation: gunman-3-win 1s steps(2) infinite;
+}
+@-moz-keyframes gunman-3-walk {
+  from {
+    background-position: -27px -144px;
+  }
+  to {
+    background-position: -83px -144px;
+  }
+}
+@-webkit-keyframes gunman-3-walk {
+  from {
+    background-position: -27px -144px;
+  }
+  to {
+    background-position: -83px -144px;
+  }
+}
+@-o-keyframes gunman-3-walk {
+  from {
+    background-position: -27px -144px;
+  }
+  to {
+    background-position: -83px -144px;
+  }
+}
+@keyframes gunman-3-walk {
+  from {
+    background-position: -27px -144px;
+  }
+  to {
+    background-position: -83px -144px;
+  }
+}
+@-moz-keyframes gunman-3-win {
+  from {
+    background-position: -114px -144px;
+  }
+  to {
+    background-position: -174px -144px;
+  }
+}
+@-webkit-keyframes gunman-3-win {
+  from {
+    background-position: -114px -144px;
+  }
+  to {
+    background-position: -174px -144px;
+  }
+}
+@-o-keyframes gunman-3-win {
+  from {
+    background-position: -114px -144px;
+  }
+  to {
+    background-position: -174px -144px;
+  }
+}
+@keyframes gunman-3-win {
+  from {
+    background-position: -114px -144px;
+  }
+  to {
+    background-position: -174px -144px;
+  }
+}
+@-moz-keyframes gunman-3-fly {
+  0% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 45%;
+  }
+  100% {
+    bottom: 30%;
+  }
+}
+@-webkit-keyframes gunman-3-fly {
+  0% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 45%;
+  }
+  100% {
+    bottom: 30%;
+  }
+}
+@-o-keyframes gunman-3-fly {
+  0% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 45%;
+  }
+  100% {
+    bottom: 30%;
+  }
+}
+@keyframes gunman-3-fly {
+  0% {
+    bottom: 30%;
+  }
+  70% {
+    bottom: 45%;
+  }
+  100% {
+    bottom: 30%;
+  }
+}
+@-moz-keyframes gunman-3-hat-fly {
+  0% {
+    top: 0;
+    left: 3px;
+  }
+  30% {
+    top: -20px;
+    left: 30px;
+  }
+  60% {
+    top: 0px;
+    left: 70px;
+  }
+  100% {
+    top: 20px;
+    left: 105px;
+  }
+}
+@-webkit-keyframes gunman-3-hat-fly {
+  0% {
+    top: 0;
+    left: 3px;
+  }
+  30% {
+    top: -20px;
+    left: 30px;
+  }
+  60% {
+    top: 0px;
+    left: 70px;
+  }
+  100% {
+    top: 20px;
+    left: 105px;
+  }
+}
+@-o-keyframes gunman-3-hat-fly {
+  0% {
+    top: 0;
+    left: 3px;
+  }
+  30% {
+    top: -20px;
+    left: 30px;
+  }
+  60% {
+    top: 0px;
+    left: 70px;
+  }
+  100% {
+    top: 20px;
+    left: 105px;
+  }
+}
+@keyframes gunman-3-hat-fly {
+  0% {
+    top: 0;
+    left: 3px;
+  }
+  30% {
+    top: -20px;
+    left: 30px;
+  }
+  60% {
+    top: 0px;
+    left: 70px;
+  }
+  100% {
+    top: 20px;
+    left: 105px;
+  }
+}

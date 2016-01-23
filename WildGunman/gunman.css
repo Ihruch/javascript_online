@@ -1,0 +1,141 @@
+@import url("css/gunman-1.css");
+@import url("css/gunman-2.css");
+@import url("css/gunman-3.css");
+@import url("css/gunman-4.css");
+@import url("css/gunman-5.css");
+
+#game {
+    image-rendering:optimizeSpeed;             /* Legal fallback */
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    image-rendering:crisp-edges;               /* CSS4 Proposed  */
+    image-rendering:pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+
+    position: relative;
+    width: 264px;
+    height: 200px;
+    transform: scale(3) translateY(40%);
+    overflow: hidden;
+    background-color: #000;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    margin: 0 auto;
+}
+
+.game__bg {
+    background: url(bg.png) no-repeat 0 50%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+@keyframes invert-blink {
+    from { filter: none; }
+    to { filter: invert(100%) }
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+.gunman {
+    position: absolute;
+    background-image: url(gunman.png);
+    width: 32px;
+    height: 80px;
+    display: inline-block;
+    bottom: 30%;
+    margin-top: -10px;
+}
+
+.game__status {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: white;
+    width: 50px;
+    line-height: .85em;
+}
+
+.game__status-reward-value {
+    color: green;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.game__timers {
+    color: white;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    line-height: .85em;
+    text-align: center;
+}
+.game__timers-player,
+.game__timers-bandit{
+ display: inline-block;
+}
+
+.game__timers-player_mode_blink {
+    opacity: 1;
+    animation: blink .2s steps(2) infinite;
+}
+
+.game__timers-label {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 0.4em;
+    color: grey;
+}
+
+.game__death {
+    display: none;
+    left: 0;
+    top: 32px;
+    right: 0;
+    bottom: 32px;
+    position: absolute;
+    background-color: red;
+    opacity: 0.5;
+}
+
+.game__bg_state_blink {
+    animation: invert-blink .2s 4;
+}
+
+.game__bg_state_foul {
+    filter: invert(100%);
+}
+
+.game__bg_state_death .game__death {
+    display: block;
+}
+
+.game__bubble {
+    font-weight: bold;
+    padding: 3px 5px;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    font-size: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    line-height: 1;
+
+}
+
+.retro {
+    transform: scaleY(0.9);
+    font-variant: small-caps;
+    font-family: "Lucida Console", monospace;
+}

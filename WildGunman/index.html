@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wild Gunman</title>
+    <link rel="stylesheet" href="gunman.css"/>
+</head>
+<body>
+
+<div id="game">
+    <div class="game__bg">
+        <div class="game__death"></div>
+    </div>
+
+    <div class="game__bubble retro"></div>
+    <div class="game__timers retro">
+        <div class="game__timers-label">You:</div><div class="game__timers-player "></div>
+        <br/>
+        <div class="game__timers-label">Gunman:</div><div class="game__timers-bandit"></div>
+    </div>
+    <div class="game__status retro">
+        <div class="game__status-reward">$<div class="game__status-reward-value">0</div>reward</div>
+    </div>
+</div>
+
+<script src="js/timer.js"></script>
+<script src="js/game.js"></script>
+<script src="js/gunman.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script>
+    var gunmanGame = new Game();
+    Audio.init(function(){
+        UI.init();
+        gunmanGame.start();
+    });
+
+</script>
+</body>
+</html>
